@@ -99,6 +99,9 @@ class NetboxConnection(object):
 
         if 'status' in param:
             return resp_data
+        
+        if not 'results' in resp_data:
+            return resp_data
 
         return resp_data['results']
 
